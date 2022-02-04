@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { DirService } from '../../services/dir.service';
 import { createPath } from '../../shared/helpers/create-path';
+import { FileOptionsService } from '../modals/file-options/file-options.service';
 
 @Component({
     selector: 'app-menu',
@@ -18,7 +19,11 @@ export class MenuComponent implements OnInit {
     @Input() dirs: string[] = [];
     @Input() files: string[] = [];
 
-    constructor(private readonly router: ActivatedRoute, public readonly dirService: DirService) {}
+    constructor(
+        private readonly router: ActivatedRoute,
+        public readonly dirService: DirService,
+        public readonly fileOptionsService: FileOptionsService,
+    ) {}
 
     ngOnInit(): void {
         this.router.url.subscribe(url => {

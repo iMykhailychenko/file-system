@@ -1,0 +1,26 @@
+.columns {
+    padding: 10px;
+
+    .column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        min-height: 150px;
+        border-radius: 5px;
+
+        &:hover {
+            background: #e7f3ff;
+        }
+    }
+}
+
+.modal-card-foot {
+    justify-content: flex-end;
+
+    button {
+        width: auto;
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,20 @@
+<div *ngIf="fileOptionsService.isOpen" class="modal is-active">
+    <div class="modal-background" (click)="fileOptionsService.setModalData()"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">{{ fileOptionsService.title }}</p>
+            <button type="button" class="delete" aria-label="close" (click)="fileOptionsService.setModalData()"></button>
+        </header>
+        <section class="modal-card-body">
+            <h2 class="subtitle is-5">Открыть в:</h2>
+            <div class="columns is-multiline">
+                <button *ngFor="let app of appsService.apps" type="button" title="{{ app }}" class="column is-one-third">
+                    {{ app }}
+                </button>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" (click)="fileOptionsService.setModalData()">Cancel</button>
+        </footer>
+    </div>
+</div>

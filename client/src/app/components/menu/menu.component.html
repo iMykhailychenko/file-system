@@ -29,7 +29,7 @@
             title="{{ item }}"
             class="column is-one-fifth"
             *ngFor="let item of filteredData(files)"
-            (click)="dirService.openFile(path + '/' + item)"
+            (click)="fileOptionsService.setModalData({ isOpen: true, title: item })"
         >
             <img src="assets/file.png" alt="" />
             <span>{{ item }}</span>
