@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  server:
+    container_name: server
+    build: ./server
+    restart: unless-stopped
+    command: flask run
+    env_file: .env
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./client/dist:/app/client
+    depends_on:
+      - server

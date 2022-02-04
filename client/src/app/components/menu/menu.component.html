@@ -1,0 +1,38 @@
+<nav class="panel is-link">
+    <p class="panel-heading">{{ title }}</p>
+    <div class="panel-block">
+        <p class="control has-icons-left">
+            <input [(ngModel)]="search" class="input" type="text" placeholder="Search" />
+            <span class="material-icons">search</span>
+        </p>
+    </div>
+
+    <div class="panel-block">
+        <button class="button is-info is-inverted is-fullwidth" type="button" (click)="toggleHiddenFiles()">
+            {{ withHiddenFiles ? 'Hide files' : 'Show hidden files' }}
+        </button>
+    </div>
+
+    <div class="columns is-multiline">
+        <a
+            *ngFor="let item of filteredData(dirs)"
+            class="column is-one-fifth"
+            [routerLink]="path + '/' + item"
+            title="{{ item }}"
+        >
+            <img src="assets/folder.png" alt="" />
+            <span>{{ item }}</span>
+        </a>
+
+        <button
+            type="button"
+            title="{{ item }}"
+            class="column is-one-fifth"
+            *ngFor="let item of filteredData(files)"
+            (click)="dirService.openFile(path + '/' + item)"
+        >
+            <img src="assets/file.png" alt="" />
+            <span>{{ item }}</span>
+        </button>
+    </div>
+</nav>

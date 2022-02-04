@@ -1,0 +1,48 @@
+.panel {
+  margin-top: 20px;
+
+  .control {
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .columns {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 150px;
+    border-radius: 5px;
+
+    &:hover {
+      background: #e7f3ff;
+    }
+
+    span {
+      display: block;
+      width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    img {
+      height: 80px;
+      width: 80px;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+  }
+}

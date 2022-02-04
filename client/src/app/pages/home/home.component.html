@@ -1,0 +1,5 @@
+<app-container>
+    <app-breadcrumb *ngIf="!isHome"></app-breadcrumb>
+    <app-back-button *ngIf="!isHome"></app-back-button>
+    <app-menu title="Directories" [files]="dirService.data.files" [dirs]="dirService.data.directories"></app-menu>
+</app-container>

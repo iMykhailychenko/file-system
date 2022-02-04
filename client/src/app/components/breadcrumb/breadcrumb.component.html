@@ -1,0 +1,11 @@
+<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+        <li>
+            <a routerLink="/">Home</a>
+        </li>
+
+        <li *ngFor="let breadcrumb of breadcrumbs; let last = last" [class.is-active]="last">
+            <a [routerLink]="breadcrumb.path">{{ breadcrumb.name }}</a>
+        </li>
+    </ul>
+</nav>
