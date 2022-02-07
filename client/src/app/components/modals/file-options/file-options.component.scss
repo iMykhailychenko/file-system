@@ -13,6 +13,13 @@
         &:hover {
             background: #e7f3ff;
         }
+
+        img {
+            height: 90px;
+            width: 90px;
+            margin-bottom: 10px;
+            object-fit: contain;
+        }
     }
 }
 

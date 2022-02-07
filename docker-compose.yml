@@ -14,6 +14,6 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./client/dist:/app/client
+      - ./client/dist/client:/app/client
     depends_on:
       - server

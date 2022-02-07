@@ -28,9 +28,6 @@ export class BreadcrumbComponent implements OnInit {
 
                 return acc;
             }, []);
-
-            console.log(url);
-            console.log(this.breadcrumbs);
         });
     }
 }
