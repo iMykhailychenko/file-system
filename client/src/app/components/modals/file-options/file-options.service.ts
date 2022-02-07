@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 interface Options {
     isOpen?: boolean;
-    title?: string;
+    title: string;
 }
 
 @Injectable({

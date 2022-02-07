@@ -8,7 +8,13 @@
         <section class="modal-card-body">
             <h2 class="subtitle is-5">Открыть в:</h2>
             <div class="columns is-multiline">
-                <button *ngFor="let app of appsService.apps" type="button" title="{{ app }}" class="column is-one-third">
+                <button
+                    type="button"
+                    title="{{ app }}"
+                    class="column is-one-third"
+                    *ngFor="let app of appsService.apps"
+                    (click)="appsService.openInApp(fileOptionsService.title, app)"
+                >
                     <img src="/assets/apps/{{ app }}.png" alt="" />
                 </button>
             </div>
