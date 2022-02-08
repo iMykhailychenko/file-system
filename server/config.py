@@ -1,4 +1,4 @@
-BASE_PATH = "/"
+BASE_PATH = "/Users"
 
 apps_list = [
     'Visual Studio Code.app',

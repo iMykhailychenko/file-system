@@ -19,4 +19,4 @@ api.add_resource(OpenFile, "/api/v1/open-file")
 api.add_resource(Directory, "/api/v1/<path:sub_path>")
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(port=5555)
